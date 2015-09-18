@@ -19,7 +19,7 @@ class Webdriver(object):
         self.stamp = datetime.now().isoformat()
 
     def start(self):
-        self.webdriver = webdriver.Firefox()
+        self.webdriver = webdriver.PhantomJS()
         self.webdriver.maximize_window()
         log.debug('started webdriver')
 
