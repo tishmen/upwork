@@ -1,0 +1,8 @@
+__pycache__
+migrations
+*.pyc
+*.sublime-project
+*.sublime-workspace
+logs
+*.pid
+ghostdriver.log
