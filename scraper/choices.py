@@ -1,361 +1,331 @@
 CATEGORY_CHOICES = (
+    (None, 'Any Category'),
+    ('Web, Mobile & Software Dev', 'Web, Mobile & Software Dev'),
+    ('IT & Networking', 'IT & Networking'),
+    ('Data Science & Analytics', 'Data Science & Analytics'),
+    ('Engineering & Architecture', 'Engineering & Architecture'),
+    ('Design & Creative', 'Design & Creative'),
+    ('Writing', 'Writing'),
+    ('Translation', 'Translation'),
+    ('Legal', 'Legal'),
+    ('Admin Support', 'Admin Support'),
+    ('Customer Service', 'Customer Service'),
+    ('Sales & Marketing', 'Sales & Marketing'),
+    ('Accounting & Consulting', 'Accounting & Consulting')
+)
+
+
+SUBCATEGORY_CHOICES = (
     (
-        'web-mobile-software-dev',
-        'Web, Mobile & Software Dev'
+        'Web, Mobile & Software Dev | Desktop Software Development',
+        'Web, Mobile & Software Dev | Desktop Software Development'
     ),
     (
-        'web-mobile-software-dev, desktop-software-development',
-        ' - Desktop Software Development'
+        'Web, Mobile & Software Dev | Ecommerce Development',
+        'Web, Mobile & Software Dev | Ecommerce Development'
     ),
     (
-        'web-mobile-software-dev, ecommerce-development',
-        ' - Ecommerce Development'
+        'Web, Mobile & Software Dev | Game Development',
+        'Web, Mobile & Software Dev | Game Development'
     ),
     (
-        'web-mobile-software-dev, game-development',
-        ' - Game Development'
+        'Web, Mobile & Software Dev | Mobile Development',
+        'Web, Mobile & Software Dev | Mobile Development'
     ),
     (
-        'web-mobile-software-dev, mobile-development',
-        ' - Mobile Development'
+        'Web, Mobile & Software Dev | Product Management',
+        'Web, Mobile & Software Dev | Product Management'
     ),
     (
-        'web-mobile-software-dev, product-management',
-        ' - Product Management'
+        'Web, Mobile & Software Dev | QA & Testing',
+        'Web, Mobile & Software Dev | QA & Testing'
     ),
     (
-        'web-mobile-software-dev, qa-testing',
-        ' - QA & Testing'
+        'Web, Mobile & Software Dev | Scripts & Utilities',
+        'Web, Mobile & Software Dev | Scripts & Utilities'
     ),
     (
-        'web-mobile-software-dev, scripts-utilities',
-        ' - Scripts & Utilities'
+        'Web, Mobile & Software Dev | Web Development',
+        'Web, Mobile & Software Dev | Web Development'
     ),
     (
-        'web-mobile-software-dev, web-development',
-        ' - Web Development'
+        'Web, Mobile & Software Dev | Web & Mobile Design',
+        'Web, Mobile & Software Dev | Web & Mobile Design'
     ),
     (
-        'web-mobile-software-dev, web-mobile-design',
-        ' - Web & Mobile Design'
+        'IT & Networking | Database Administration',
+        'IT & Networking | Database Administration'
     ),
     (
-        'it-networking',
-        'IT & Networking'
+        'IT & Networking | ERP / CRM Software',
+        'IT & Networking | ERP / CRM Software'
     ),
     (
-        'it-networking, database-administration',
-        ' - Database Administration'
+        'IT & Networking | Information Security',
+        'IT & Networking | Information Security'
     ),
     (
-        'it-networking, erp-crm-software',
-        ' - ERP / CRM Software'
+        'IT & Networking | Network & System Administration',
+        'IT & Networking | Network & System Administration'
     ),
     (
-        'it-networking, information-security',
-        ' - Information Security'
+        'Data Science & Analytics | A/B Testing',
+        'Data Science & Analytics | A/B Testing'
     ),
     (
-        'it-networking, network-system-administration',
-        ' - Network & System Administration'
+        'Data Science & Analytics | Data Visualization',
+        'Data Science & Analytics | Data Visualization'
     ),
     (
-        'data-science-analytics',
-        'Data Science & Analytics'
+        'Data Science & Analytics | Data Extraction / ETL',
+        'Data Science & Analytics | Data Extraction / ETL'
     ),
     (
-        'data-science-analytics, a-b-testing',
-        ' - A/B Testing'
+        'Data Science & Analytics | Data Mining & Management',
+        'Data Science & Analytics | Data Mining & Management'
     ),
     (
-        'data-science-analytics, data-visualization',
-        ' - Data Visualization'
+        'Data Science & Analytics | Machine Learning',
+        'Data Science & Analytics | Machine Learning'
     ),
     (
-        'data-science-analytics, data-extraction-etl',
-        ' - Data Extraction / ETL'
+        'Data Science & Analytics | Quantitative Analysis',
+        'Data Science & Analytics | Quantitative Analysis'
     ),
     (
-        'data-science-analytics, data-mining-management',
-        ' - Data Mining & Management'
+        'Engineering & Architecture | 3D Modeling & CAD',
+        'Engineering & Architecture | 3D Modeling & CAD'
     ),
     (
-        'data-science-analytics, machine-learning',
-        ' - Machine Learning'
+        'Engineering & Architecture | Architecture',
+        'Engineering & Architecture | Architecture'
     ),
     (
-        'data-science-analytics, quantitative-analysis',
-        ' - Quantitative Analysis'
+        'Engineering & Architecture | Chemical Engineering',
+        'Engineering & Architecture | Chemical Engineering'
     ),
     (
-        'engineering-architecture',
-        'Engineering & Architecture'
+        'Engineering & Architecture | Civil & Structural Engineering',
+        'Engineering & Architecture | Civil & Structural Engineering'
     ),
     (
-        'engineering-architecture, 3d-modeling-cad',
-        ' - 3D Modeling & CAD'
+        'Engineering & Architecture | Contract Manufacturing',
+        'Engineering & Architecture | Contract Manufacturing'
     ),
     (
-        'engineering-architecture, architecture',
-        ' - Architecture'
+        'Engineering & Architecture | Electrical Engineering',
+        'Engineering & Architecture | Electrical Engineering'
     ),
     (
-        'engineering-architecture, chemical-engineering',
-        ' - Chemical Engineering'
+        'Engineering & Architecture | Interior Design',
+        'Engineering & Architecture | Interior Design'
     ),
     (
-        'engineering-architecture, civil-structural-engineering',
-        ' - Civil & Structural Engineering'
+        'Engineering & Architecture | Mechanical Engineering',
+        'Engineering & Architecture | Mechanical Engineering'
     ),
     (
-        'engineering-architecture, contract-manufacturing',
-        ' - Contract Manufacturing'
+        'Engineering & Architecture | Product Design',
+        'Engineering & Architecture | Product Design'
     ),
     (
-        'engineering-architecture, electrical-engineering',
-        ' - Electrical Engineering'
+        'Design & Creative | Animation',
+        'Design & Creative | Animation'
     ),
     (
-        'engineering-architecture, interior-design',
-        ' - Interior Design'
+        'Design & Creative | Audio Production',
+        'Design & Creative | Audio Production'
     ),
     (
-        'engineering-architecture, mechanical-engineering',
-        ' - Mechanical Engineering'
+        'Design & Creative | Graphic Design',
+        'Design & Creative | Graphic Design'
     ),
     (
-        'engineering-architecture, product-design',
-        ' - Product Design'
+        'Design & Creative | Illustration',
+        'Design & Creative | Illustration'
     ),
     (
-        'design-creative',
-        'Design & Creative'
+        'Design & Creative | Logo Design & Branding',
+        'Design & Creative | Logo Design & Branding'
     ),
     (
-        'design-creative, animation',
-        ' - Animation'
+        'Design & Creative | Photography',
+        'Design & Creative | Photography'
     ),
     (
-        'design-creative, audio-production',
-        ' - Audio Production'
+        'Design & Creative | Presentations',
+        'Design & Creative | Presentations'
     ),
     (
-        'design-creative, graphic-design',
-        ' - Graphic Design'
+        'Design & Creative | Video Production',
+        'Design & Creative | Video Production'
     ),
     (
-        'design-creative, illustration',
-        ' - Illustration'
+        'Design & Creative | Voice Talent',
+        'Design & Creative | Voice Talent'
     ),
     (
-        'design-creative, logo-design-branding',
-        ' - Logo Design & Branding'
+        'Writing | Academic Writing & Research',
+        'Writing | Academic Writing & Research'
     ),
     (
-        'design-creative, photography',
-        ' - Photography'
+        'Writing | Article & Blog Writing',
+        'Writing | Article & Blog Writing'
     ),
     (
-        'design-creative, presentations',
-        ' - Presentations'
+        'Writing | CopyWriting',
+        'Writing | CopyWriting'
     ),
     (
-        'design-creative, video-production',
-        ' - Video Production'
+        'Writing | Creative Writing',
+        'Writing | Creative Writing'
     ),
     (
-        'design-creative, voice-talent',
-        ' - Voice Talent'
+        'Writing | Editing & Proofreading',
+        'Writing | Editing & Proofreading'
     ),
     (
-        'writing',
-        'Writing'
+        'Writing | Grant Writing',
+        'Writing | Grant Writing'
     ),
     (
-        'writing, academic-writing-research',
-        ' - Academic Writing & Research'
+        'Writing | Resumes & Cover Letters',
+        'Writing | Resumes & Cover Letters'
     ),
     (
-        'writing, article-blog-writing',
-        ' - Article & Blog Writing'
+        'Writing | Technical Writing',
+        'Writing | Technical Writing'
     ),
     (
-        'writing, copywriting',
-        ' - Copywriting'
+        'Writing | Web Content',
+        'Writing | Web Content'
     ),
     (
-        'writing, creative-writing',
-        ' - Creative Writing'
+        'Translation | General Translation',
+        'Translation | General Translation'
     ),
     (
-        'writing, editing-proofreading',
-        ' - Editing & Proofreading'
+        'Translation | Legal Translation',
+        'Translation | Legal Translation'
     ),
     (
-        'writing, grant-writing',
-        ' - Grant Writing'
+        'Translation | Medical Translation',
+        'Translation | Medical Translation'
     ),
     (
-        'writing, resumes-cover-letters',
-        ' - Resumes & Cover Letters'
+        'Translation | Technical Translation',
+        'Translation | Technical Translation'
     ),
     (
-        'writing, technical-writing',
-        ' - Technical Writing'
+        'Legal | Contract Law',
+        'Legal | Contract Law'
     ),
     (
-        'writing, web-content',
-        ' - Web Content'
+        'Legal | Corporate Law',
+        'Legal | Corporate Law'
     ),
     (
-        'translation',
-        'Translation'
+        'Legal | Criminal Law',
+        'Legal | Criminal Law'
     ),
     (
-        'translation, general-translation',
-        ' - General Translation'
+        'Legal | Family Law',
+        'Legal | Family Law'
     ),
     (
-        'translation, legal-translation',
-        ' - Legal Translation'
+        'Legal | Intellectual Property Law',
+        'Legal | Intellectual Property Law'
     ),
     (
-        'translation, medical-translation',
-        ' - Medical Translation'
+        'Legal | ParaLegal Services',
+        'Legal | ParaLegal Services'
     ),
     (
-        'translation, technical-translation',
-        ' - Technical Translation'
+        'Admin Support | Data Entry',
+        'Admin Support | Data Entry'
     ),
     (
-        'legal',
-        'Legal'
+        'Admin Support | Personal / Virtual Assistant',
+        'Admin Support | Personal / Virtual Assistant'
     ),
     (
-        'legal, contract-law',
-        ' - Contract Law'
+        'Admin Support | Project Management',
+        'Admin Support | Project Management'
     ),
     (
-        'legal, corporate-law',
-        ' - Corporate Law'
+        'Admin Support | Transcription',
+        'Admin Support | Transcription'
     ),
     (
-        'legal, criminal-law',
-        ' - Criminal Law'
+        'Admin Support | Web Research',
+        'Admin Support | Web Research'
     ),
     (
-        'legal, family-law',
-        ' - Family Law'
+        'Customer Service | Customer Service',
+        'Customer Service | Customer Service'
     ),
     (
-        'legal, intellectual-property-law',
-        ' - Intellectual Property Law'
+        'Customer Service | Technical Support',
+        'Customer Service | Technical Support'
     ),
     (
-        'legal, paralegal-services',
-        ' - Paralegal Services'
+        'Sales & Marketing | Display Advertising',
+        'Sales & Marketing | Display Advertising'
     ),
     (
-        'admin-support',
-        'Admin Support'
+        'Sales & Marketing | Email & Marketing Automation',
+        'Sales & Marketing | Email & Marketing Automation'
     ),
     (
-        'admin-support, data-entry',
-        ' - Data Entry'
+        'Sales & Marketing | Lead Generation',
+        'Sales & Marketing | Lead Generation'
     ),
     (
-        'admin-support, personal-virtual-assistant',
-        ' - Personal / Virtual Assistant'
+        'Sales & Marketing | Market & Customer Research',
+        'Sales & Marketing | Market & Customer Research'
     ),
     (
-        'admin-support, project-management',
-        ' - Project Management'
+        'Sales & Marketing | Marketing Strategy',
+        'Sales & Marketing | Marketing Strategy'
     ),
     (
-        'admin-support, transcription',
-        ' - Transcription'
+        'Sales & Marketing | Public Relations',
+        'Sales & Marketing | Public Relations'
     ),
     (
-        'admin-support, web-research',
-        ' - Web Research'
+        'Sales & Marketing | SEM - Search Engine Marketing',
+        'Sales & Marketing | SEM - Search Engine Marketing'
     ),
     (
-        'customer-service',
-        'Customer Service'
+        'Sales & Marketing | SEO - Search Engine Optimization',
+        'Sales & Marketing | SEO - Search Engine Optimization'
     ),
     (
-        'customer-service, customer-service',
-        ' - Customer Service'
+        'Sales & Marketing | SMM - Social Media Marketing',
+        'Sales & Marketing | SMM - Social Media Marketing'
     ),
     (
-        'customer-service, technical-support',
-        ' - Technical Support'
+        'Sales & Marketing | Telemarketing & Telesales',
+        'Sales & Marketing | Telemarketing & Telesales'
     ),
     (
-        'sales-marketing',
-        'Sales & Marketing'
+        'Accounting & Consulting | Accounting',
+        'Accounting & Consulting | Accounting'
     ),
     (
-        'sales-marketing, display-advertising',
-        ' - Display Advertising'
+        'Accounting & Consulting | Financial Planning',
+        'Accounting & Consulting | Financial Planning'
     ),
     (
-        'sales-marketing, email-marketing-automation',
-        ' - Email & Marketing Automation'
+        'Accounting & Consulting | Human Resources',
+        'Accounting & Consulting | Human Resources'
     ),
     (
-        'sales-marketing, lead-generation',
-        ' - Lead Generation'
-    ),
-    (
-        'sales-marketing, market-customer-research',
-        ' - Market & Customer Research'
-    ),
-    (
-        'sales-marketing, marketing-strategy',
-        ' - Marketing Strategy'
-    ),
-    (
-        'sales-marketing, public-relations',
-        ' - Public Relations'
-    ),
-    (
-        'sales-marketing, sem-search-engine-marketing',
-        ' - SEM - Search Engine Marketing'
-    ),
-    (
-        'sales-marketing, seo-search-engine-optimization',
-        ' - SEO - Search Engine Optimization'
-    ),
-    (
-        'sales-marketing, smm-social-media-marketing',
-        ' - SMM - Social Media Marketing'
-    ),
-    (
-        'sales-marketing, telemarketing-telesales',
-        ' - Telemarketing & Telesales'
-    ),
-    (
-        'accounting-consulting',
-        'Accounting & Consulting'
-    ),
-    (
-        'accounting-consulting, accounting',
-        ' - Accounting'
-    ),
-    (
-        'accounting-consulting, financial-planning',
-        ' - Financial Planning'
-    ),
-    (
-        'accounting-consulting, human-resources',
-        ' - Human Resources'
-    ),
-    (
-        'accounting-consulting, management-consulting',
-        ' - Management Consulting'
+        'Accounting & Consulting | Management Consulting',
+        'Accounting & Consulting | Management Consulting'
     ),
 )
+
 
 FEEDBACK_CHOICES = (
     ('45', '4.5 & up stars'),
@@ -366,8 +336,31 @@ FEEDBACK_CHOICES = (
     ('0', 'No feedback yet'),
 )
 
+
 EXPERIENCE_CHOICES = (
     ('1', 'Entry'),
     ('2', 'Intermediate'),
     ('3', 'Expert'),
+)
+
+
+TYPE_CHOICES = (
+    ('Hourly', 'Hourly'),
+    ('Fixed price', 'Fixed price'),
+)
+
+
+DURATION_CHOICES = (
+    ('More than 6 months', 'More than 6 months'),
+    ('3 to 6 months', '3 to 6 months'),
+    ('1 to 3 months', '1 to 3 months'),
+    ('Less than 1 month', 'Less than 1 month'),
+    ('Less than 1 week', 'Less than 1 week'),
+)
+
+
+WORKLOAD_CHOICES = (
+    ('More than 30 hrs/week', 'More than 30 hrs/week'),
+    ('Less than 30 hrs/week', 'Less than 30 hrs/week'),
+    ("I don't know yet", "I don't know yet"),
 )

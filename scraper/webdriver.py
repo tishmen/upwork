@@ -6,6 +6,7 @@ from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.webdriver.support.ui import Select
 
 log = logging.getLogger('upwork')
 
@@ -49,6 +50,17 @@ class Webdriver(object):
     def click(self, element, name):
         element.click()
         log.debug('clicked {}'.format(name))
+        self.sleep()
+
+    def select(self, element, name, text):
+        options = Select(element)
+        options.select_by_visible_text(text)
+        log.debug('selected {} for {}'.format(text, name))
+        self.sleep()
+
+    def clear(self, element, name):
+        element.clear()
+        log.debug('cleared {}'.format(name))
         self.sleep()
 
     def element(self, by, selector, name, parent=None):

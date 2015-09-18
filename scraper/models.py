@@ -19,7 +19,8 @@ class Scraper(models.Model):
     page_count = models.IntegerField(default=1)
     query = models.CharField(max_length=100)
     category = models.CharField(
-        max_length=250, null=True, blank=True, choices=CATEGORY_CHOICES
+        max_length=250, null=True, blank=True,
+        choices=CATEGORY_CHOICES + SUBCATEGORY_CHOICES, default='Any Category'
     )
     feedback = models.CharField(
         max_length=250, null=True, blank=True, choices=FEEDBACK_CHOICES
@@ -45,7 +46,7 @@ class Freelancer(models.Model):
     overview = models.TextField()
     hourly_rate = models.FloatField()
     rating = models.FloatField()
-    job_success = models.FloatField()
+    job_success = models.FloatField(null=True)
     hours_worked = models.FloatField()
     job_count = models.IntegerField()
 
@@ -63,6 +64,29 @@ class Job(models.Model):
     hour_count = models.FloatField(null=True, blank=True)
     hourly_rate = models.IntegerField(null=True, blank=True)
     earned = models.FloatField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Inviter(models.Model):
+
+    name = models.CharField(max_length=100, unique=True)
+    account = models.ForeignKey('Account')
+    message = models.TextField(null=True, blank=True)
+    category = models.CharField(max_length=250, choices=SUBCATEGORY_CHOICES)
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    type = models.CharField(
+        max_length=100, choices=TYPE_CHOICES, default='Hourly'
+    )
+    duration = models.CharField(max_length=100, choices=DURATION_CHOICES)
+    workload = models.CharField(max_length=100, choices=WORKLOAD_CHOICES)
+    public = models.BooleanField(default=True)
+    active = models.BooleanField(default=False)
+    last_run = models.DateTimeField(null=True, blank=True)
+    success = models.BooleanField(default=False)
+    traceback = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.name

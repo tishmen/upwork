@@ -4,23 +4,11 @@ from datetime import datetime
 
 from celery import shared_task
 
-from scraper.upwork import UpworkScraper
+from scraper.upwork import UpworkScraper, UpworkInviter
 from scraper.models import Freelancer, Job
+from scraper.map import generate_url
 
 log = logging.getLogger('upwork')
-
-
-def generate_url(category, experience, query):
-    url = 'https://www.upwork.com/o/profiles/browse/'
-    if category:
-        split = category.split(', ')
-        url += 'c/{}/'.format(split[0])
-        if len(split) == 2:
-            url += 'sc/{}/'.format(split[1])
-    url += '?q='.format(query)
-    if experience:
-        url += '&ex='.format(experience)
-    return url
 
 
 @shared_task(bind=True)
@@ -29,15 +17,27 @@ def scrape_task(self, scraper_obj):
         url = generate_url(
             scraper_obj.category, scraper_obj.experience, scraper_obj.query
         )
-        scraper = UpworkScraper(scraper_obj.name)
+        scraper = UpworkScraper()
         urls = scraper.scrape_urls(url, scraper_obj.page_count)
-        scraper.login(scraper_obj.account.email, scraper_obj.account.password)
-        results = scraper.scrape_freelancers(urls)
+        results = scraper.scrape(
+            scraper_obj.name, scraper_obj.account.email,
+            scraper_obj.account.password, urls
+        )
         for result in results:
             jobs = result.pop('jobs')
-            freelancer, _ = Freelancer.objects.get_or_create(**result)
+            try:
+                freelancer_obj = Freelancer.objects.get(result['url'])
+            except Freelancer.DoesNotExist:
+                freelancer_obj = Freelancer(**result)
+                freelancer_obj.save()
             for job in jobs:
-                Job.objects.get_or_create(freelancer=freelancer, **job)
+                try:
+                    job_obj = Job.objects.get(
+                        freelancer=freelancer_obj, name=job['name']
+                    )
+                except Job.DoesNotExist:
+                    job_obj = Job(**job)
+                    job_obj.save()
         scraper_obj.last_run = datetime.now()
         scraper_obj.success = True
         scraper_obj.traceback = None
@@ -47,4 +47,27 @@ def scrape_task(self, scraper_obj):
         scraper_obj.success = False
         scraper_obj.traceback = e
         scraper_obj.save()
+        raise
+
+
+@shared_task(bind=True)
+def invite_task(self, freelancers, inviter_obj):
+    try:
+        inviter = UpworkInviter()
+        inviter.invite(
+            inviter_obj.name, inviter_obj.account.email,
+            inviter_obj.account.password, inviter_obj.message,
+            inviter_obj.category, inviter_obj.title, inviter_obj.description,
+            inviter_obj.type, inviter_obj.duration, inviter_obj.workload,
+            inviter_obj.public, [freelancer.url for freelancer in freelancers]
+        )
+        inviter_obj.last_run = datetime.now()
+        inviter_obj.success = True
+        inviter_obj.traceback = None
+        inviter_obj.save()
+    except Exception as e:
+        log.error('Traceback: {}'.format(traceback.format_exc()))
+        inviter_obj.success = False
+        inviter_obj.traceback = e
+        inviter_obj.save()
         raise

@@ -1848,3 +1848,2830 @@ found date element
 found name element
 found date element
 found 34 job details elements
+started webdriver
+got https://www.upwork.com/login
+sleeping 8.776430366144021 seconds
+Traceback: Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 45, in invite_task
+    inviter.login(inviter_obj.account.email, inviter_obj.account.password)
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 21, in login
+    email = self.element(By.ID, 'login_username', 'email')
+  File "/home/milan/work/josh/upwork/scraper/webdriver.py", line 63, in element
+    element = parent.find_element(*selector)
+AttributeError: 'str' object has no attribute 'find_element'
+
+started webdriver
+got https://www.upwork.com/login
+sleeping 8.962839952729531 seconds
+Traceback: Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 21, in login
+    email = self.element(By.ID, 'login_username', 'email')
+  File "/home/milan/work/josh/upwork/scraper/webdriver.py", line 65, in element
+    element = self.webdriver.find_element((by, selector))
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webdriver.py", line 693, in find_element
+    raise InvalidSelectorException("Invalid locator values passed in")
+selenium.common.exceptions.InvalidSelectorException: Message: Invalid locator values passed in
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 45, in invite_task
+    inviter.login(inviter_obj.account.email, inviter_obj.account.password)
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 23, in login
+    email = self.element(By.ID, 'username', 'email')
+  File "/home/milan/work/josh/upwork/scraper/webdriver.py", line 65, in element
+    element = self.webdriver.find_element((by, selector))
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webdriver.py", line 693, in find_element
+    raise InvalidSelectorException("Invalid locator values passed in")
+selenium.common.exceptions.InvalidSelectorException: Message: Invalid locator values passed in
+
+
+started webdriver
+got https://www.upwork.com/login
+sleeping 5.078029336154878 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 5.2105660087989545 seconds
+found password element
+sent nihuya22! to password input
+sleeping 8.929762324715597 seconds
+found login element
+clicked login
+sleeping 5.6478932786358005 seconds
+Traceback: Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 48, in invite_task
+    inviter_obj.subcategory, inviter_obj.title,
+AttributeError: 'Inviter' object has no attribute 'subcategory'
+
+started webdriver
+got https://www.upwork.com/login
+sleeping 6.519256152125546 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 6.087831984025677 seconds
+found password element
+sent nihuya22! to password input
+sleeping 5.112190400901055 seconds
+found login element
+clicked login
+sleeping 6.364689806988606 seconds
+starting test inviter
+got https://www.upwork.com/o/profiles/users/_~0119b0e7bbfe98bda7/
+sleeping 5.995480026962461 seconds
+found contact element
+clicked contact
+sleeping 7.115803073116314 seconds
+found message element
+sent test to message
+sleeping 7.502832752316792 seconds
+stoped webdriver
+Traceback: Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 50, in invite_task
+    [freelancer.url for freelancer in freelancers]
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 198, in invite
+    workload, public
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 168, in send
+    category_str, subcategory_str = category_str.split(' | ')
+ValueError: need more than 1 value to unpack
+
+started webdriver
+got https://www.upwork.com/login
+sleeping 8.232373084838366 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 9.617185219998873 seconds
+found password element
+sent nihuya22! to password input
+sleeping 6.37789639349847 seconds
+found login element
+clicked login
+sleeping 6.659741647380891 seconds
+starting test inviter
+got https://www.upwork.com/o/profiles/users/_~0119b0e7bbfe98bda7/
+sleeping 5.896457782139304 seconds
+found contact element
+clicked contact
+sleeping 5.431850953750572 seconds
+found message element
+cleared message
+sleeping 9.154906548010402 seconds
+sent test to message
+sleeping 6.464948841594271 seconds
+stoped webdriver
+Traceback: Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 50, in invite_task
+    [freelancer.url for freelancer in freelancers]
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 201, in invite
+    workload, public
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 171, in send
+    category_str, subcategory_str = category_str.split(' | ')
+ValueError: need more than 1 value to unpack
+
+started webdriver
+got https://www.upwork.com/login
+sleeping 6.548698125588347 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 6.90101703539656 seconds
+found password element
+sent nihuya22! to password input
+sleeping 5.02576418157194 seconds
+found login element
+clicked login
+sleeping 5.4923056033614746 seconds
+starting test inviter
+got https://www.upwork.com/o/profiles/users/_~0119b0e7bbfe98bda7/
+sleeping 7.893299491820558 seconds
+found contact element
+clicked contact
+sleeping 5.388236614648713 seconds
+found message element
+cleared message
+sleeping 5.778904930359415 seconds
+sent test to message
+sleeping 6.568220830832716 seconds
+stoped webdriver
+Traceback: Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 50, in invite_task
+    [freelancer.url for freelancer in freelancers]
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 201, in invite
+    workload, public
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 171, in send
+    category_str, subcategory_str = category_str.split(' | ')
+ValueError: need more than 1 value to unpack
+
+started webdriver
+got https://www.upwork.com/login
+sleeping 7.065115525436003 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 7.307821867339426 seconds
+found password element
+sent nihuya22! to password input
+sleeping 9.231235512747554 seconds
+found login element
+clicked login
+sleeping 6.482501620473993 seconds
+starting test inviter
+got https://www.upwork.com/o/profiles/users/_~018968a1467241d26e/
+sleeping 9.91703625854953 seconds
+stoped webdriver
+Traceback: Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 50, in invite_task
+    [freelancer.url for freelancer in freelancers]
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 201, in invite
+    workload, public
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 164, in send
+    contact_button = self.element(By.LINK_TEXT, 'Contact', 'contact')
+  File "/home/milan/work/josh/upwork/scraper/webdriver.py", line 70, in element
+    element = self.webdriver.find_element(by, selector)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webdriver.py", line 707, in find_element
+    {'using': by, 'value': value})['value']
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webdriver.py", line 196, in execute
+    self.error_handler.check_response(response)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/errorhandler.py", line 181, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: {"method":"link text","selector":"Contact"}
+Stacktrace:
+    at FirefoxDriver.prototype.findElementInternal_ (file:///tmp/tmpmtn67goq/extensions/fxdriver@googlecode.com/components/driver-component.js:10667)
+    at FirefoxDriver.prototype.findElement (file:///tmp/tmpmtn67goq/extensions/fxdriver@googlecode.com/components/driver-component.js:10676)
+    at DelayedCommand.prototype.executeInternal_/h (file:///tmp/tmpmtn67goq/extensions/fxdriver@googlecode.com/components/command-processor.js:12643)
+    at DelayedCommand.prototype.executeInternal_ (file:///tmp/tmpmtn67goq/extensions/fxdriver@googlecode.com/components/command-processor.js:12648)
+    at DelayedCommand.prototype.execute/< (file:///tmp/tmpmtn67goq/extensions/fxdriver@googlecode.com/components/command-processor.js:12590)
+
+started webdriver
+got https://www.upwork.com/login
+sleeping 6.954118025986785 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 6.790645346571276 seconds
+found password element
+sent nihuya22! to password input
+sleeping 8.487053350428939 seconds
+found login element
+clicked login
+sleeping 5.668510675867969 seconds
+starting test inviter
+got https://www.upwork.com/o/profiles/users/_~018968a1467241d26e/
+sleeping 6.71024334220345 seconds
+found contact element
+clicked contact
+sleeping 8.169998898465483 seconds
+found message element
+cleared message
+sleeping 7.71336790671269 seconds
+sent test to message
+sleeping 9.961587370688807 seconds
+found category element
+stoped webdriver
+Traceback: Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 50, in invite_task
+    [freelancer.url for freelancer in freelancers]
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 201, in invite
+    workload, public
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 173, in send
+    self.select(category, 'category', category_str)
+  File "/home/milan/work/josh/upwork/scraper/webdriver.py", line 56, in select
+    options = Select(element)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/support/select.py", line 35, in __init__
+    if webelement.tag_name.lower() != "select":
+AttributeError: 'str' object has no attribute 'tag_name'
+
+started webdriver
+got https://www.upwork.com/login
+sleeping 9.638196316379572 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 5.44692146251618 seconds
+found password element
+sent nihuya22! to password input
+sleeping 8.982970990420364 seconds
+found login element
+clicked login
+sleeping 5.052532059412402 seconds
+starting test inviter
+got https://www.upwork.com/o/profiles/users/_~0119b0e7bbfe98bda7/
+sleeping 7.473908870635282 seconds
+found contact element
+clicked contact
+sleeping 7.872132868779428 seconds
+found message element
+cleared message
+sleeping 5.948987572015929 seconds
+sent test to message
+sleeping 6.551416046692276 seconds
+found category element
+selected Web, Mobile & Software Dev for category
+sleeping 8.006208753733134 seconds
+found subcategory element
+selected Ecommerce Development for subcategory
+sleeping 7.63997566692492 seconds
+found title element
+sent test to title
+sleeping 6.454675978992402 seconds
+found description element
+sent test to description
+sleeping 6.244379147159247 seconds
+found duration element
+selected More than 6 months for duration
+sleeping 8.590923248116592 seconds
+found workload element
+selected Less than 30 hrs/week for workload
+sleeping 6.992444281172709 seconds
+stoping test inviter
+stoped webdriver
+got https://www.upwork.com/o/profiles/browse/?q=&ex=&page=1
+scraped 10 urls
+starting test scraper
+started webdriver
+got https://www.upwork.com/login
+sleeping 5.479244131195079 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 8.588594982127349 seconds
+found password element
+sent nihuya22! to password input
+sleeping 8.980758458604642 seconds
+found login element
+clicked login
+sleeping 6.637567936396246 seconds
+got https://www.upwork.com/o/profiles/users/_~01814849309d3d22ca/
+sleeping 9.633105861127671 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found 15 job details elements
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped freelancer Andrew P.
+got https://www.upwork.com/o/profiles/users/_~01f2df6374725100c5/
+sleeping 8.29657940175105 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 jobs elements
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found 12 job details elements
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped freelancer Jonathan B.
+got https://www.upwork.com/o/profiles/users/_~0145cfa89088524828/
+sleeping 6.625659263902519 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found 18 job details elements
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped freelancer Aleksandr Tolstikov
+got https://www.upwork.com/o/profiles/users/_~019b0efd633dc771bf/
+sleeping 8.314285261628367 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 7 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found 16 job details elements
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped freelancer Johnny Speiermann
+got https://www.upwork.com/o/profiles/users/_~016cf00d76092b9167/
+sleeping 8.216675013950198 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+stoped webdriver
+Traceback: Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 24, in scrape_task
+    scraper_obj.account.password, urls
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 154, in scrape
+    results.append(self.parse_freelancer(url))
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 93, in parse_freelancer
+    'jobs': self.parse_jobs(),
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 104, in parse_jobs
+    By.CSS_SELECTOR, 'p.o-support-info', 'date', el
+  File "/home/milan/work/josh/upwork/scraper/webdriver.py", line 68, in element
+    element = parent.find_element(by, selector)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webelement.py", line 468, in find_element
+    {"using": by, "value": value})['value']
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webelement.py", line 448, in _execute
+    return self._parent.execute(command, params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webdriver.py", line 196, in execute
+    self.error_handler.check_response(response)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/errorhandler.py", line 181, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: {"method":"css selector","selector":"p.o-support-info"}
+Stacktrace:
+    at FirefoxDriver.prototype.findElementInternal_ (file:///tmp/tmpv45p7epi/extensions/fxdriver@googlecode.com/components/driver-component.js:10667)
+    at FirefoxDriver.prototype.findChildElement (file:///tmp/tmpv45p7epi/extensions/fxdriver@googlecode.com/components/driver-component.js:10679)
+    at DelayedCommand.prototype.executeInternal_/h (file:///tmp/tmpv45p7epi/extensions/fxdriver@googlecode.com/components/command-processor.js:12643)
+    at DelayedCommand.prototype.executeInternal_ (file:///tmp/tmpv45p7epi/extensions/fxdriver@googlecode.com/components/command-processor.js:12648)
+    at DelayedCommand.prototype.execute/< (file:///tmp/tmpv45p7epi/extensions/fxdriver@googlecode.com/components/command-processor.js:12590)
+
+got https://www.upwork.com/o/profiles/browse/?q=&ex=&page=1
+scraped 10 urls
+starting test scraper
+started webdriver
+got https://www.upwork.com/login
+sleeping 9.650977045644014 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 9.207407799048202 seconds
+found password element
+sent nihuya22! to password input
+sleeping 9.581006651334082 seconds
+found login element
+clicked login
+sleeping 5.125472750587551 seconds
+got https://www.upwork.com/o/profiles/users/_~01814849309d3d22ca/
+sleeping 6.691489564633116 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found 15 job details elements
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped freelancer Andrew P.
+got https://www.upwork.com/o/profiles/users/_~01f2df6374725100c5/
+sleeping 7.9094528762927805 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 jobs elements
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found 12 job details elements
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped freelancer Jonathan B.
+got https://www.upwork.com/o/profiles/users/_~0145cfa89088524828/
+sleeping 8.171054910495172 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found 18 job details elements
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped freelancer Aleksandr Tolstikov
+got https://www.upwork.com/o/profiles/users/_~019b0efd633dc771bf/
+sleeping 9.050830928846192 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 7 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found 16 job details elements
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped freelancer Johnny Speiermann
+got https://www.upwork.com/o/profiles/users/_~016cf00d76092b9167/
+sleeping 7.6455273748561865 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+stoped webdriver
+Traceback: Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 24, in scrape_task
+    scraper_obj.account.password, urls
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 154, in scrape
+    results.append(self.parse_freelancer(url))
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 93, in parse_freelancer
+    'jobs': self.parse_jobs(),
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 104, in parse_jobs
+    By.CSS_SELECTOR, 'p.o-support-info', 'date', el
+  File "/home/milan/work/josh/upwork/scraper/webdriver.py", line 68, in element
+    element = parent.find_element(by, selector)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webelement.py", line 468, in find_element
+    {"using": by, "value": value})['value']
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webelement.py", line 448, in _execute
+    return self._parent.execute(command, params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webdriver.py", line 196, in execute
+    self.error_handler.check_response(response)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/errorhandler.py", line 181, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: {"method":"css selector","selector":"p.o-support-info"}
+Stacktrace:
+    at FirefoxDriver.prototype.findElementInternal_ (file:///tmp/tmpxckokura/extensions/fxdriver@googlecode.com/components/driver-component.js:10667)
+    at FirefoxDriver.prototype.findChildElement (file:///tmp/tmpxckokura/extensions/fxdriver@googlecode.com/components/driver-component.js:10679)
+    at DelayedCommand.prototype.executeInternal_/h (file:///tmp/tmpxckokura/extensions/fxdriver@googlecode.com/components/command-processor.js:12643)
+    at DelayedCommand.prototype.executeInternal_ (file:///tmp/tmpxckokura/extensions/fxdriver@googlecode.com/components/command-processor.js:12648)
+    at DelayedCommand.prototype.execute/< (file:///tmp/tmpxckokura/extensions/fxdriver@googlecode.com/components/command-processor.js:12590)
+
+got https://www.upwork.com/o/profiles/browse/?q=&ex=&page=1
+scraped 10 urls
+starting test scraper
+started webdriver
+got https://www.upwork.com/login
+sleeping 8.765599916946401 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 5.616181648069544 seconds
+found password element
+sent nihuya22! to password input
+sleeping 7.471026375061257 seconds
+found login element
+clicked login
+sleeping 7.489617694199309 seconds
+got https://www.upwork.com/o/profiles/users/_~01814849309d3d22ca/
+sleeping 6.846328975482901 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 5 work elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found 15 job details elements
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped freelancer Andrew P.
+got https://www.upwork.com/o/profiles/users/_~01f2df6374725100c5/
+sleeping 5.389960731293931 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 5 work elements
+found 6 jobs elements
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found 12 job details elements
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped freelancer Jonathan B.
+got https://www.upwork.com/o/profiles/users/_~0145cfa89088524828/
+sleeping 8.846190479237087 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 work elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found 18 job details elements
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped freelancer Aleksandr Tolstikov
+got https://www.upwork.com/o/profiles/users/_~019b0efd633dc771bf/
+sleeping 5.09099544245174 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 4 work elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found 16 job details elements
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped freelancer Johnny Speiermann
+got https://www.upwork.com/o/profiles/users/_~016cf00d76092b9167/
+sleeping 5.853713251234599 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 5 work elements
+found 5 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found 16 job details elements
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped freelancer Maksim Kudrytski
+got https://www.upwork.com/o/profiles/users/_~0134c0f307a9606e4b/
+sleeping 9.120279127504197 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 work elements
+found 16 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found 49 job details elements
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped freelancer Igor S.
+got https://www.upwork.com/o/profiles/users/_~01426ef12bef9b8e4a/
+sleeping 7.699062188921868 seconds
+found name element
+found title element
+found location element
+found 1 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 work elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found 17 job details elements
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped freelancer Rodney Mendoza
+got https://www.upwork.com/o/profiles/users/_~0119ced41083c51837/
+sleeping 8.800026552258645 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 7 work elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found 15 job details elements
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped freelancer Giang Le
+got https://www.upwork.com/o/profiles/users/_~01093e56fac59f492e/
+sleeping 8.00902603931206 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 3 work history elements
+found 6 work elements
+found 3 jobs elements
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found 10 job details elements
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped freelancer Nikolay C.
+got https://www.upwork.com/o/profiles/users/_~015f091447d7efcd77/
+sleeping 7.292608056441658 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 5 work elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found 14 job details elements
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped freelancer Melanie Feltham
+stoping test scraper
+stoped webdriver
+Traceback: Traceback (most recent call last):
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 405, in get_or_create
+    return self.get(**lookup), False
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+scraper.models.DoesNotExist: Freelancer matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.IntegrityError: null value in column "job_success" violates not-null constraint
+DETAIL:  Failing row contains (22, https://www.upwork.com/o/profiles/users/_~01093e56fac59f492e/, Nikolay C., Brainbench certified JSE/JEE dev, DB dev, Sys-Arch, Kyiv, Ukraine, Comet, JavaScript, XSL, XML, CSS, Would you like to find a powerful Java-dev?
+If so, please read f..., 40, 5, null, 14.921, 8).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 28, in scrape_task
+    freelancer, _ = Freelancer.objects.get_or_create(**result)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 407, in get_or_create
+    return self._create_object_from_params(lookup, params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 447, in _create_object_from_params
+    six.reraise(*exc_info)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 439, in _create_object_from_params
+    obj = self.create(**params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "job_success" violates not-null constraint
+DETAIL:  Failing row contains (22, https://www.upwork.com/o/profiles/users/_~01093e56fac59f492e/, Nikolay C., Brainbench certified JSE/JEE dev, DB dev, Sys-Arch, Kyiv, Ukraine, Comet, JavaScript, XSL, XML, CSS, Would you like to find a powerful Java-dev?
+If so, please read f..., 40, 5, null, 14.921, 8).
+
+
+got https://www.upwork.com/o/profiles/browse/?q=&ex=&page=1
+scraped 10 urls
+starting test scraper
+started webdriver
+stoped webdriver
+Traceback: Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 24, in scrape_task
+    scraper_obj.account.password, urls
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 151, in scrape
+    self.login(email, password)
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 18, in login
+    self.get('https://www.upwork.com/login')
+  File "/home/milan/work/josh/upwork/scraper/webdriver.py", line 36, in get
+    self.webdriver.get(url)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webdriver.py", line 208, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webdriver.py", line 194, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/remote_connection.py", line 395, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/remote_connection.py", line 426, in _request
+    resp = self._conn.getresponse()
+  File "/usr/lib/python3.4/http/client.py", line 1147, in getresponse
+    response.begin()
+  File "/usr/lib/python3.4/http/client.py", line 351, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.4/http/client.py", line 321, in _read_status
+    raise BadStatusLine(line)
+http.client.BadStatusLine: ''
+
+got https://www.upwork.com/o/profiles/browse/?q=&ex=&page=1
+scraped 10 urls
+starting test scraper
+started webdriver
+got https://www.upwork.com/login
+sleeping 9.386414645633415 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 7.018281645953152 seconds
+found password element
+sent nihuya22! to password input
+sleeping 7.499610331005488 seconds
+found login element
+clicked login
+sleeping 5.517126116852309 seconds
+got https://www.upwork.com/o/profiles/users/_~01814849309d3d22ca/
+sleeping 9.40916541092141 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 5 work elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found 15 job details elements
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped job Big Data Automation Framework
+scraped freelancer Andrew P.
+got https://www.upwork.com/o/profiles/users/_~01f2df6374725100c5/
+sleeping 6.76088114451748 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 5 work elements
+found 6 jobs elements
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found 12 job details elements
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped job DBA - Sybase, SQLServer, Oracle
+scraped freelancer Jonathan B.
+got https://www.upwork.com/o/profiles/users/_~0145cfa89088524828/
+sleeping 5.868678916425036 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 work elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found 18 job details elements
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped job Senior Drupal developer with PHP expertise
+scraped freelancer Aleksandr Tolstikov
+got https://www.upwork.com/o/profiles/users/_~019b0efd633dc771bf/
+sleeping 6.787907938734839 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 4 work elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found 16 job details elements
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped job Linguist (Danish)
+scraped freelancer Johnny Speiermann
+got https://www.upwork.com/o/profiles/users/_~016cf00d76092b9167/
+sleeping 9.986885092419522 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 5 work elements
+found 5 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found 16 job details elements
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped job Hockey Game graphic design
+scraped freelancer Maksim Kudrytski
+got https://www.upwork.com/o/profiles/users/_~0134c0f307a9606e4b/
+sleeping 8.907446626675952 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 work elements
+found 16 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found 49 job details elements
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped job LAMP setup, migration and maintenance
+scraped freelancer Igor S.
+got https://www.upwork.com/o/profiles/users/_~01426ef12bef9b8e4a/
+sleeping 6.1882525574584015 seconds
+found name element
+found title element
+found location element
+found 1 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 work elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found 17 job details elements
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped job Oracle DBA - Database Partitioning and Tuning
+scraped freelancer Rodney Mendoza
+got https://www.upwork.com/o/profiles/users/_~0119ced41083c51837/
+sleeping 8.914389630958237 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 7 work elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found 15 job details elements
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped job Groovy and Grails - Architect and Sr Developer
+scraped freelancer Giang Le
+got https://www.upwork.com/o/profiles/users/_~015f091447d7efcd77/
+sleeping 9.741134326613594 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 5 work elements
+found 6 jobs elements
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found 14 job details elements
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped job Canadian Usability Study -- Seeking Insights (Canada only)
+scraped freelancer Melanie Feltham
+got https://www.upwork.com/o/profiles/users/_~01093e56fac59f492e/
+sleeping 8.08395432161099 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 3 work history elements
+found 6 work elements
+found 3 jobs elements
+found name element
+found date element
+found name element
+found date element
+found rating element
+found name element
+found date element
+found rating element
+found 10 job details elements
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped job Java Developer for Online Games (using Java, CometD, Jetty, Dojo)
+scraped freelancer Nikolay C.
+stoping test scraper
+stoped webdriver
+starting test inviter
+started webdriver
+got https://www.upwork.com/login
+sleeping 7.595086956293594 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 8.271700141548482 seconds
+found password element
+sent nihuya22! to password input
+sleeping 8.627439608446792 seconds
+found login element
+clicked login
+sleeping 8.817912212513669 seconds
+got https://www.upwork.com/o/profiles/users/_~01093e56fac59f492e/
+sleeping 9.644887584183063 seconds
+found contact element
+clicked contact
+sleeping 5.623206779653501 seconds
+found message element
+cleared message
+sleeping 6.41072773090179 seconds
+sent test to message
+sleeping 6.889012865954965 seconds
+found category element
+selected Web, Mobile & Software Dev for category
+sleeping 7.077489788351267 seconds
+found subcategory element
+selected Ecommerce Development for subcategory
+sleeping 5.908116414009353 seconds
+found title element
+sent test to title
+sleeping 9.098235012399336 seconds
+found description element
+sent test to description
+sleeping 5.910648660974646 seconds
+found duration element
+selected More than 6 months for duration
+sleeping 5.596670826398052 seconds
+found workload element
+selected Less than 30 hrs/week for workload
+sleeping 8.347622180666223 seconds
+stoping test inviter
+stoped webdriver
+got https://www.upwork.com/o/profiles/browse/?q=&ex=&page=1
+scraped 10 urls
+starting test scraper
+started webdriver
+got https://www.upwork.com/login
+sleeping 9.496077245927223 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 8.99443691462628 seconds
+found password element
+sent nihuya22! to password input
+sleeping 6.08139658994913 seconds
+found login element
+clicked login
+sleeping 7.284342795028986 seconds
+got https://www.upwork.com/o/profiles/users/_~015b07d9d3c51f1290/
+sleeping 8.753765501030244 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 work elements
+found 13 jobs elements
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job 3000 Words of website content
+found name element
+found date element
+found 2 job details elements
+scraped job Need about 3000 words of content re-worded
+found name element
+found date element
+found 2 job details elements
+scraped job 300 Word Article
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job Editor and Researcher for self published book for creative people
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job Creating writing, proofreading
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job Creative writing tattoo texts
+scraped freelancer Jacqueline Topiol
+got https://www.upwork.com/o/profiles/users/_~0145cfa89088524828/
+sleeping 8.768409758717675 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 work elements
+found 6 jobs elements
+found name element
+found date element
+found 3 job details elements
+scraped job various drupal project
+found name element
+found date element
+found 2 job details elements
+scraped job Drupal Expert
+found name element
+found date element
+found 3 job details elements
+scraped job Drupal developer
+found name element
+found date element
+found 3 job details elements
+scraped job various drupal project
+found name element
+found date element
+found 3 job details elements
+scraped job Simple HTML support
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Senior Drupal developer with PHP expertise
+scraped freelancer Aleksandr Tolstikov
+got https://www.upwork.com/o/profiles/users/_~018e7dbe095075826b/
+sleeping 7.926792349021454 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 5 work elements
+found 11 jobs elements
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job Senior Web Developer
+found name element
+found date element
+found 3 job details elements
+scraped job Custom form programming
+found name element
+found date element
+found 3 job details elements
+scraped job PHP programmer
+found name element
+found date element
+found 3 job details elements
+scraped job PHP Programmer
+found name element
+found date element
+found 2 job details elements
+scraped job Needed- Experienced LAMP Developer for Website/ECommerce
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Woocommerce Customization
+scraped freelancer Mehul D.
+got https://www.upwork.com/o/profiles/users/_~016bef14be6a45ec2f/
+sleeping 5.180279532483345 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 5 work elements
+found 11 jobs elements
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job App prototype like Facebook Paper in Phonegap
+found name element
+found date element
+found 3 job details elements
+scraped job Roobricks
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Test Ipad App
+found name element
+found date element
+found 3 job details elements
+scraped job Testing MyGerdQ
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job CSS tweaker
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job jQuery/HTML/CSS developer
+scraped freelancer Anthony S.
+got https://www.upwork.com/o/profiles/users/_~01ffb4ea14ea923dc1/
+sleeping 5.681441316240416 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 6 work elements
+found 6 jobs elements
+found name element
+found date element
+found 3 job details elements
+scraped job Social Platform
+found name element
+found date element
+found 3 job details elements
+scraped job PHP/CodeIgniter/MySQL/Linux project
+found name element
+found date element
+found 3 job details elements
+scraped job MySQL / PHP / AJAX EXPERT Programmer needed
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Social Platform
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Seeking developer for social media site
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Social Platform
+scraped freelancer German Polovnikov
+got https://www.upwork.com/o/profiles/users/_~01f7cf77339f6364f2/
+sleeping 6.885406233678017 seconds
+found name element
+found title element
+found location element
+found 0 tags elements
+found overview element
+found hourly rate element
+stoped webdriver
+Traceback: Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 24, in scrape_task
+    scraper_obj.account.password, urls
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 156, in scrape
+    results.append(self.parse_freelancer(url))
+  File "/home/milan/work/josh/upwork/scraper/upwork.py", line 70, in parse_freelancer
+    By.CSS_SELECTOR, 'strong[itemprop="ratingValue"]', 'rating'
+  File "/home/milan/work/josh/upwork/scraper/webdriver.py", line 70, in element
+    element = self.webdriver.find_element(by, selector)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webdriver.py", line 707, in find_element
+    {'using': by, 'value': value})['value']
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/webdriver.py", line 196, in execute
+    self.error_handler.check_response(response)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/selenium/webdriver/remote/errorhandler.py", line 181, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: {"method":"css selector","selector":"strong[itemprop=\"ratingValue\"]"}
+Stacktrace:
+    at FirefoxDriver.prototype.findElementInternal_ (file:///tmp/tmpp337kcn2/extensions/fxdriver@googlecode.com/components/driver-component.js:10667)
+    at FirefoxDriver.prototype.findElement (file:///tmp/tmpp337kcn2/extensions/fxdriver@googlecode.com/components/driver-component.js:10676)
+    at DelayedCommand.prototype.executeInternal_/h (file:///tmp/tmpp337kcn2/extensions/fxdriver@googlecode.com/components/command-processor.js:12643)
+    at DelayedCommand.prototype.executeInternal_ (file:///tmp/tmpp337kcn2/extensions/fxdriver@googlecode.com/components/command-processor.js:12648)
+    at DelayedCommand.prototype.execute/< (file:///tmp/tmpp337kcn2/extensions/fxdriver@googlecode.com/components/command-processor.js:12590)
+
+got https://www.upwork.com/o/profiles/browse/?q=&ex=&page=1
+scraped 10 urls
+starting test scraper
+started webdriver
+got https://www.upwork.com/login
+sleeping 6.460846472207473 seconds
+found email element
+sent topuzov.work@gmail.com to email
+sleeping 9.187318010478567 seconds
+found password element
+sent nihuya22! to password input
+sleeping 8.976446421781517 seconds
+found login element
+clicked login
+sleeping 7.874321394332823 seconds
+got https://www.upwork.com/o/profiles/users/_~015b07d9d3c51f1290/
+sleeping 7.238720858272358 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 work elements
+found 13 jobs elements
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job 3000 Words of website content
+found name element
+found date element
+found 2 job details elements
+scraped job Need about 3000 words of content re-worded
+found name element
+found date element
+found 2 job details elements
+scraped job 300 Word Article
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job Editor and Researcher for self published book for creative people
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job Creating writing, proofreading
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job Creative writing tattoo texts
+scraped freelancer Jacqueline Topiol
+got https://www.upwork.com/o/profiles/users/_~0145cfa89088524828/
+sleeping 9.803902444746253 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 6 work elements
+found 6 jobs elements
+found name element
+found date element
+found 3 job details elements
+scraped job various drupal project
+found name element
+found date element
+found 2 job details elements
+scraped job Drupal Expert
+found name element
+found date element
+found 3 job details elements
+scraped job Drupal developer
+found name element
+found date element
+found 3 job details elements
+scraped job various drupal project
+found name element
+found date element
+found 3 job details elements
+scraped job Simple HTML support
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Senior Drupal developer with PHP expertise
+scraped freelancer Aleksandr Tolstikov
+got https://www.upwork.com/o/profiles/users/_~018e7dbe095075826b/
+sleeping 9.632587969746787 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 5 work elements
+found 11 jobs elements
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job Senior Web Developer
+found name element
+found date element
+found 3 job details elements
+scraped job Custom form programming
+found name element
+found date element
+found 3 job details elements
+scraped job PHP programmer
+found name element
+found date element
+found 3 job details elements
+scraped job PHP Programmer
+found name element
+found date element
+found 2 job details elements
+scraped job Needed- Experienced LAMP Developer for Website/ECommerce
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Woocommerce Customization
+scraped freelancer Mehul D.
+got https://www.upwork.com/o/profiles/users/_~016bef14be6a45ec2f/
+sleeping 6.062593637752206 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 5 work elements
+found 11 jobs elements
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job App prototype like Facebook Paper in Phonegap
+found name element
+found date element
+found 3 job details elements
+scraped job Roobricks
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Test Ipad App
+found name element
+found date element
+found 3 job details elements
+scraped job Testing MyGerdQ
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job CSS tweaker
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job jQuery/HTML/CSS developer
+scraped freelancer Anthony S.
+got https://www.upwork.com/o/profiles/users/_~01ffb4ea14ea923dc1/
+sleeping 9.378858322279891 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 6 work elements
+found 6 jobs elements
+found name element
+found date element
+found 3 job details elements
+scraped job Social Platform
+found name element
+found date element
+found 3 job details elements
+scraped job PHP/CodeIgniter/MySQL/Linux project
+found name element
+found date element
+found 3 job details elements
+scraped job MySQL / PHP / AJAX EXPERT Programmer needed
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Social Platform
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Seeking developer for social media site
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Social Platform
+scraped freelancer German Polovnikov
+got https://www.upwork.com/o/profiles/users/_~01f7cf77339f6364f2/
+sleeping 7.697092979783915 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 5 work elements
+found 16 jobs elements
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job Bigcommerce customization
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job web development and design
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job Web Design
+found name element
+found date element
+found 3 job details elements
+scraped job Blog setup on Big Commerce
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job BigCommerce Website Implementation
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Web Content
+scraped freelancer Richard Carlile
+got https://www.upwork.com/o/profiles/users/_~01ddc8a8d3c4ab5053/
+sleeping 5.137827010343056 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 5 work elements
+found 6 jobs elements
+found name element
+found date element
+found 3 job details elements
+scraped job SolidWorks Automation Support (Ref PO09178)
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job SolidWorks C# Plug-In Development
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job Solidworks File Extraction
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job Need a bootstrap between two applications
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job Need a bootstrap between two applications
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job SolidWorks Automated Macro Launcher (Ref PO09177)
+scraped freelancer Nagarjuna Reddy Kora
+got https://www.upwork.com/o/profiles/users/_~0194ce874d0e534317/
+sleeping 6.893828214736261 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 7 work elements
+found 12 jobs elements
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 2 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job Amazon product listings
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job product description
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job Amazon product listings
+found name element
+found date element
+found 3 job details elements
+scraped job Sales & Marketing Consultant
+found name element
+found date element
+found rating element
+found 2 job details elements
+scraped job amazon flash tattoo listing
+found name element
+found date element
+found 3 job details elements
+scraped job Sales writing/copywriting - funnel
+scraped freelancer Karen King
+got https://www.upwork.com/o/profiles/users/_~0145f2be21c0fec3dc/
+sleeping 6.018238002672594 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 4 work history elements
+found 4 work elements
+found 12 jobs elements
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found 3 job details elements
+scraped job 
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Innovativeqa Website
+found name element
+found date element
+found 3 job details elements
+scraped job programmer
+found name element
+found date element
+found 3 job details elements
+scraped job Updates to SID
+found name element
+found date element
+found 3 job details elements
+scraped job tunii.com music promotion site
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Job Matching Plus Social Networking Site
+found name element
+found date element
+found rating element
+found 3 job details elements
+scraped job Movie Social Network Website
+scraped freelancer Dmitriy T.
+got https://www.upwork.com/o/profiles/users/_~01e64cca742968de3b/
+sleeping 9.090428571724257 seconds
+found name element
+found title element
+found location element
+found 5 tags elements
+found overview element
+found hourly rate element
+found rating element
+found 5 work history elements
+found 6 work elements
+found 6 jobs elements
+found name element
+found date element
+found 2 job details elements
+scraped job Task specification and Machine Learning Consulting
+found name element
+found date element
+found 1 job details elements
+scraped job Data Scientist
+found name element
+found date element
+found 3 job details elements
+scraped job Computer Scientist / Writer
+found name element
+found date element
+found 2 job details elements
+scraped job Technical writing
+found name element
+found date element
+found 1 job details elements
+scraped job US Content Writer
+found name element
+found date element
+found 2 job details elements
+scraped job Writing tasks related to Data management, data science, statistics
+scraped freelancer Jovan Pehcevski
+stoping test scraper
+stoped webdriver
+Traceback: Traceback (most recent call last):
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 405, in get_or_create
+    return self.get(**lookup), False
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+scraper.models.DoesNotExist: Freelancer matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.IntegrityError: duplicate key value violates unique constraint "scraper_freelancer_url_key"
+DETAIL:  Key (url)=(https://www.upwork.com/o/profiles/users/_~018e7dbe095075826b/) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/milan/work/josh/upwork/scraper/tasks.py", line 28, in scrape_task
+    freelancer, _ = Freelancer.objects.get_or_create(**result)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 407, in get_or_create
+    return self._create_object_from_params(lookup, params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 447, in _create_object_from_params
+    six.reraise(*exc_info)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 439, in _create_object_from_params
+    obj = self.create(**params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/home/milan/.virtualenvs/josh/lib/python3.4/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "scraper_freelancer_url_key"
+DETAIL:  Key (url)=(https://www.upwork.com/o/profiles/users/_~018e7dbe095075826b/) already exists.
+
+
