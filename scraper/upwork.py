@@ -11,9 +11,6 @@ log = logging.getLogger('upwork')
 
 class Upwork(Webdriver):
 
-    def __init__(self):
-        super().__init__()
-
     def login(self, email_str, password_str):
         self.get('https://www.upwork.com/login')
         try:

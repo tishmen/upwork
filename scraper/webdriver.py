@@ -1,7 +1,5 @@
 import logging
 import time
-import random
-from datetime import datetime
 
 import requests
 from bs4 import BeautifulSoup
@@ -13,11 +11,6 @@ log = logging.getLogger('upwork')
 
 class Webdriver(object):
 
-    def __init__(self):
-        self.min_sleep = 5
-        self.max_sleep = 10
-        self.stamp = datetime.now().isoformat()
-
     def start(self):
         self.webdriver = webdriver.PhantomJS()
         self.webdriver.maximize_window()
@@ -28,7 +21,7 @@ class Webdriver(object):
         log.debug('stoped webdriver')
 
     def sleep(self):
-        seconds = random.uniform(self.min_sleep, self.max_sleep)
+        seconds = 1
         log.debug('sleeping {} seconds'.format(seconds))
         time.sleep(seconds)
 
