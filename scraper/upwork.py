@@ -36,7 +36,6 @@ class Upwork(Webdriver):
 class UpworkScraper(Upwork):
 
     def _to_float(self, string):
-        print(string)
         return float(string.replace('.', '').replace(',', '.'))
 
     def _to_datetime(self, string):
@@ -55,6 +54,19 @@ class UpworkScraper(Upwork):
         return start_date, end_date
 
     def parse_freelancer(self, url):
+        try:
+            more_button = self.element(By.LINK_TEXT, 'more', 'more link')
+            self.click(more_button, 'more link')
+        except WebDriverException:
+            pass
+        try:
+            more_span = self.element(
+                By.CSS_SELECTOR, 'o-profile-overview .oTruncateToggleText',
+                'more span'
+            )
+            self.click(more_span, 'more span')
+        except WebDriverException:
+            pass
         name = self.element(By.CSS_SELECTOR, 'o-name-and-title h1', 'name')
         title = self.element(By.CSS_SELECTOR, 'o-name-and-title h3', 'title')
         location = self.element(
@@ -147,14 +159,17 @@ class UpworkScraper(Upwork):
         return urls
 
     def scrape(self, name, email, password, urls):
+        results = []
         try:
             log.debug('starting {} scraper'.format(name))
             self.start()
             self.login(email, password)
-            results = []
             for url in urls:
                 self.get(url)
-                results.append(self.parse_freelancer(url))
+                try:
+                    results.append(self.parse_freelancer(url))
+                except WebDriverException:
+                    continue
             log.debug('stoping {} scraper'.format(name))
             return results
         finally:
@@ -200,10 +215,13 @@ class UpworkInviter(Upwork):
             self.login(email, password)
             for url in urls:
                 self.get(url)
-                self.send(
-                    message, category, title, description, type, duration,
-                    workload, public
-                )
+                try:
+                    self.send(
+                        message, category, title, description, type, duration,
+                        workload, public
+                    )
+                except WebDriverException:
+                    continue
             log.debug('stoping {} inviter'.format(name))
         finally:
             self.stop()

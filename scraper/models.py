@@ -38,6 +38,7 @@ class Scraper(models.Model):
 
 class Freelancer(models.Model):
 
+    scraper = models.ForeignKey('Scraper')
     url = models.URLField(unique=True)
     name = models.CharField(max_length=100)
     title = models.CharField(max_length=500)

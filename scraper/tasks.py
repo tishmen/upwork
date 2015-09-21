@@ -25,7 +25,9 @@ def scrape_task(self, scraper_obj):
         )
         for result in results:
             jobs = result.pop('jobs')
-            freelancer_obj, _ = Freelancer.objects.get_or_create(**result)
+            freelancer_obj, _ = Freelancer.objects.get_or_create(
+                scraper=scraper_obj, **result
+            )
             for job in jobs:
                 Job.objects.get_or_create(freelancer=freelancer_obj, **job)
         scraper_obj.last_run = datetime.now()
