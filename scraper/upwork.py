@@ -36,6 +36,7 @@ class Upwork(Webdriver):
 class UpworkScraper(Upwork):
 
     def _to_float(self, string):
+        print(string)
         return float(string.replace('.', '').replace(',', '.'))
 
     def _to_datetime(self, string):
