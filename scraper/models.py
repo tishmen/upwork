@@ -57,6 +57,9 @@ class Freelancer(models.Model):
 
 class Job(models.Model):
 
+    class Meta:
+        unique_together = ('freelancer', 'name')
+
     freelancer = models.ForeignKey('Freelancer')
     name = models.CharField(max_length=100)
     start_date = models.DateTimeField()

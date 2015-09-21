@@ -25,11 +25,19 @@ def scrape_task(self, scraper_obj):
         )
         for result in results:
             jobs = result.pop('jobs')
-            result['scraper'] = scraper_obj
-            freelancer_obj, _ = Freelancer.objects.get_or_create(**result)
+            try:
+                freelancer_obj = Freelancer.objects.get(url=result['url'])
+            except Freelancer.DoesNotExist:
+                freelancer_obj = Freelancer(scraper=scraper_obj, **result)
+                freelancer_obj.save()
             for job in jobs:
-                job['freelancer'] = freelancer_obj
-                Job.objects.get_or_create(**job)
+                try:
+                    job_obj = Job.objects.get(
+                        freelancer_obj=freelancer_obj, name=job['name']
+                    )
+                except Job.DoesNotExist:
+                    job_obj = Job(freelancer_obj=freelancer_obj, **job)
+                    job_obj.save()
         scraper_obj.last_run = datetime.now()
         scraper_obj.success = True
         scraper_obj.traceback = None
