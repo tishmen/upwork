@@ -33,10 +33,10 @@ def scrape_task(self, scraper_obj):
             for job in jobs:
                 try:
                     job_obj = Job.objects.get(
-                        freelancer_obj=freelancer_obj, name=job['name']
+                        freelancer=freelancer_obj, name=job['name']
                     )
                 except Job.DoesNotExist:
-                    job_obj = Job(freelancer_obj=freelancer_obj, **job)
+                    job_obj = Job(freelancer=freelancer_obj, **job)
                     job_obj.save()
         scraper_obj.last_run = datetime.now()
         scraper_obj.success = True
