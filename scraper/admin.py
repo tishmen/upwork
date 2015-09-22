@@ -43,7 +43,7 @@ class FreelancerAdmin(admin.ModelAdmin):
 
     list_display = (
         'name', 'title', 'location', 'hourly_rate', 'rating', 'job_success',
-        'hours_worked', 'job_count'
+        'hours_worked', 'job_count', 'invited'
     )
     list_filter = ('scraper', 'invited')
     actions = ('invite', )
