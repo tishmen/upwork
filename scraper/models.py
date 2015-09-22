@@ -47,9 +47,9 @@ class Freelancer(models.Model):
     overview = models.TextField()
     hourly_rate = models.FloatField()
     rating = models.FloatField()
-    job_success = models.FloatField(null=True)
+    job_success = models.FloatField(null=True, blank=True)
     hours_worked = models.FloatField()
-    job_count = models.IntegerField()
+    job_count = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return self.name
