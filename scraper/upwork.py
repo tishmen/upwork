@@ -212,13 +212,10 @@ class UpworkInviter(Upwork):
             self.login(email, password)
             for freelancer in freelancers:
                 self.get(freelancer.url)
-                try:
-                    self.send(
-                        message, category, title, description, type, duration,
-                        workload, public
-                    )
-                except WebDriverException:
-                    continue
+                self.send(
+                    message, category, title, description, type, duration,
+                    workload, public
+                )
                 freelancer.invited = True
                 freelancer.save()
             log.debug('stoping {} inviter'.format(name))
