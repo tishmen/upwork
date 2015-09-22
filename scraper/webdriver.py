@@ -56,6 +56,12 @@ class Webdriver(object):
         log.debug('cleared {}'.format(name))
         self.sleep()
 
+    def scroll(self, element, name):
+        self.webdriver.execute_script(
+            'return arguments[0].scrollIntoView();', element
+        )
+        log.debug('scrolled to {} element'.format(name))
+
     def element(self, by, selector, name, parent=None):
         if parent:
             element = parent.find_element(by, selector)

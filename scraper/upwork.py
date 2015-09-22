@@ -184,6 +184,7 @@ class UpworkInviter(Upwork):
         self.send_keys(message, 'message', message_str)
         category_str, subcategory_str = category_str.split(' | ')
         category = self.element(By.ID, 'category', 'category')
+        self.scroll(category, 'category')
         self.select(category, 'category', category_str)
         subcategory = self.element(By.ID, 'subcategory', 'subcategory')
         self.select(subcategory, 'subcategory', subcategory_str)
