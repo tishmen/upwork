@@ -45,13 +45,14 @@ class FreelancerAdmin(admin.ModelAdmin):
         'name', 'title', 'location', 'hourly_rate', 'rating', 'job_success',
         'hours_worked', 'job_count'
     )
-    list_filter = ('scraper', )
+    list_filter = ('scraper', 'invited')
     actions = ('invite', )
     search_fields = ('name', 'title', 'location')
     inlines = (JobInline, )
 
     def invite(self, request, queryset):
         inviter = Inviter.objects.get(active=True)
+        queryset = queryset.filter(invited=False)
         count = queryset.count()
         invite_task.delay(queryset, inviter)
         if count == 1:

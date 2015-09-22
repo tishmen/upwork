@@ -68,6 +68,7 @@ class Job(models.Model):
     hour_count = models.FloatField(null=True, blank=True)
     hourly_rate = models.IntegerField(null=True, blank=True)
     earned = models.FloatField(null=True, blank=True)
+    invited = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name

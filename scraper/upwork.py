@@ -205,13 +205,13 @@ class UpworkInviter(Upwork):
         self.click(invite, 'invite')
 
     def invite(self, name, email, password, message, category, title,
-               description, type, duration, workload, public, urls):
+               description, type, duration, workload, public, freelancers):
         try:
             log.debug('starting {} inviter'.format(name))
             self.start()
             self.login(email, password)
-            for url in urls:
-                self.get(url)
+            for freelancer in freelancers:
+                self.get(freelancer.url)
                 try:
                     self.send(
                         message, category, title, description, type, duration,
@@ -219,6 +219,8 @@ class UpworkInviter(Upwork):
                     )
                 except WebDriverException:
                     continue
+                freelancer.invited = True
+                freelancer.save()
             log.debug('stoping {} inviter'.format(name))
         finally:
             self.stop()
