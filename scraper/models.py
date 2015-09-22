@@ -40,7 +40,7 @@ class Freelancer(models.Model):
 
     scraper = models.ForeignKey('Scraper')
     url = models.URLField(unique=True)
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=250)
     title = models.CharField(max_length=500)
     location = models.CharField(max_length=250)
     tags = models.TextField()
@@ -61,7 +61,7 @@ class Job(models.Model):
         unique_together = ('freelancer', 'name')
 
     freelancer = models.ForeignKey('Freelancer')
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=250)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField(null=True, blank=True)
     rating = models.FloatField(null=True, blank=True)
