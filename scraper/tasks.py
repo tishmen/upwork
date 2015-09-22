@@ -59,7 +59,7 @@ def invite_task(self, freelancers, inviter_obj):
             inviter_obj.account.password, inviter_obj.message,
             inviter_obj.category, inviter_obj.title, inviter_obj.description,
             inviter_obj.type, inviter_obj.duration, inviter_obj.workload,
-            inviter_obj.public, [freelancer.url for freelancer in freelancers]
+            inviter_obj.public, freelancers
         )
         inviter_obj.last_run = datetime.now()
         inviter_obj.success = True
