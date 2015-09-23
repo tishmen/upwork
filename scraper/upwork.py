@@ -141,6 +141,7 @@ class UpworkScraper(Upwork):
                 FreelancerJob.objects.get(
                     freelancer=freelancer_obj, name=name.text
                 )
+                return
             except FreelancerJob.DoesNotExist:
                 freelancer_job_obj = FreelancerJob(
                     freelancer=freelancer_obj,
@@ -172,7 +173,8 @@ class UpworkScraper(Upwork):
                 self.get(url)
                 try:
                     freelancer = self.parse_freelancer(url, scraper_id)
-                    self.parse_jobs(freelancer)
+                    if freelancer:
+                        self.parse_jobs(freelancer)
                 except WebDriverException:
                     continue
         finally:
