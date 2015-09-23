@@ -1,6 +1,6 @@
 from django.contrib import admin, messages
 
-from scraper.models import Account, Scraper, Freelancer, Job, Inviter
+from scraper.models import Account, Scraper, Freelancer, FreelancerJob, Job
 from scraper.tasks import scrape_task, invite_task
 
 
@@ -32,9 +32,9 @@ class ScraperAdmin(admin.ModelAdmin):
     scrape.short_description = 'Run selected scrapers'
 
 
-class JobInline(admin.StackedInline):
+class FreelancerJobInline(admin.StackedInline):
 
-    model = Job
+    model = FreelancerJob
     extra = 0
 
 
@@ -48,10 +48,10 @@ class FreelancerAdmin(admin.ModelAdmin):
     list_filter = ('scraper', 'invited')
     actions = ('invite', )
     search_fields = ('name', 'title', 'location')
-    inlines = (JobInline, )
+    inlines = (FreelancerJobInline, )
 
     def invite(self, request, queryset):
-        inviter = Inviter.objects.get(active=True)
+        inviter = Job.objects.get(active=True)
         queryset = queryset.filter(invited=False)
         count = queryset.count()
         invite_task.delay(queryset, inviter)
@@ -64,10 +64,10 @@ class FreelancerAdmin(admin.ModelAdmin):
             level=messages.SUCCESS
         )
 
-    invite.short_description = 'Run selected inviters'
+    invite.short_description = 'Invite selected freelancers'
 
 
-@admin.register(Inviter)
-class InviterAdmin(admin.ModelAdmin):
+@admin.register(Job)
+class JobAdmin(admin.ModelAdmin):
 
     list_display = ('name', 'active', 'last_run', 'success')

@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import WebDriverException
 
 from scraper.webdriver import Webdriver
+from scraper.models import Freelancer, FreelancerJob
 
 log = logging.getLogger('upwork')
 
@@ -32,10 +33,10 @@ class Upwork(Webdriver):
 
 class UpworkScraper(Upwork):
 
-    def _to_float(self, string):
+    def to_float(self, string):
         return float(string.replace('.', '').replace(',', '.'))
 
-    def _to_datetime(self, string):
+    def to_datetime(self, string):
         # Jun 2015 - Present
         # Jun 2015 - Jul 2015
         # Jun 2015
@@ -50,7 +51,7 @@ class UpworkScraper(Upwork):
             end_date = None
         return start_date, end_date
 
-    def parse_freelancer(self, url):
+    def parse_freelancer(self, url, scraper_id):
         try:
             more_button = self.element(By.LINK_TEXT, 'more', 'more link')
             self.click(more_button, 'more link')
@@ -85,28 +86,31 @@ class UpworkScraper(Upwork):
             if 'Job Success' in el.text:
                 job_success = int(el.text.split('%')[0]) / 100
             if 'hours worked' in el.text:
-                hours_worked = self._to_float(el.text.split(' ')[0])
+                hours_worked = self.to_float(el.text.split(' ')[0])
             if 'jobs' in el.text:
                 job_count = int(el.text.split(' ')[0])
-        freelancer = {
-            'url': url,
-            'name': name.text,
-            'title': title.text,
-            'location': location.text,
-            'tags': ', '.join([el.text for el in tags]),
-            'overview': overview.text,
-            'hourly_rate': float(hourly_rate.text[1:].split('/')[0]),
-            'rating': float(rating.text),
-            'job_success': job_success,
-            'hours_worked': hours_worked,
-            'job_count': job_count,
-            'jobs': self.parse_jobs(),
-        }
-        log.debug('scraped freelancer {}'.format(freelancer['name']))
-        return freelancer
+        try:
+            freelancer_obj = Freelancer.objects.get(url=url)
+        except Freelancer.DoesNotExist:
+            freelancer_obj = Freelancer(
+                scraper_id=scraper_id,
+                url=url,
+                name=name.text,
+                title=title.text,
+                location=location.text,
+                tags=', '.join([el.text for el in tags]),
+                overview=overview.text,
+                hourly_rate=float(hourly_rate.text[1:].split('/')[0]),
+                rating=float(rating.text),
+                job_success=job_success,
+                hours_worked=hours_worked,
+                job_count=job_count,
+            )
+            freelancer_obj.save()
+            log.debug('saved freelancer {}'.format(name.text))
+        return freelancer_obj
 
-    def parse_jobs(self):
-        jobs = []
+    def parse_jobs(self, freelancer_obj):
         work = self.elements(By.CSS_SELECTOR, '.air-card', 'work')[0]
         rows = self.elements(By.CSS_SELECTOR, '.row', 'jobs', parent=work)
         for el in rows:
@@ -114,7 +118,7 @@ class UpworkScraper(Upwork):
             date = self.element(
                 By.CSS_SELECTOR, 'p.o-support-info', 'date', el
             )
-            start_date, end_date = self._to_datetime(
+            start_date, end_date = self.to_datetime(
                 date.get_attribute('innerHTML').strip()
             )
             try:
@@ -128,23 +132,28 @@ class UpworkScraper(Upwork):
                     By.CSS_SELECTOR, '.text-right div', 'job details',
                     parent=el):
                 if 'hour' in el.text:
-                    hour_count = self._to_float(el.text.split(' ')[0])
+                    hour_count = self.to_float(el.text.split(' ')[0])
                 if '/' in el.text:
                     hourly_rate = float(el.text[1:].split(' / ')[0])
                 if 'earned' in el.text:
-                    earned = self._to_float(el.text[1:].split(' earned')[0])
-            job = {
-                'name': name.text,
-                'start_date': start_date,
-                'end_date': end_date,
-                'rating': rating,
-                'hour_count': hour_count,
-                'hourly_rate': hourly_rate,
-                'earned': earned,
-            }
-            log.debug('scraped job {}'.format(job['name']))
-            jobs.append(job)
-        return jobs
+                    earned = self.to_float(el.text[1:].split(' earned')[0])
+            try:
+                FreelancerJob.objects.get(
+                    freelancer=freelancer_obj, name=name.text
+                )
+            except FreelancerJob.DoesNotExist:
+                freelancer_job_obj = FreelancerJob(
+                    freelancer=freelancer_obj,
+                    name=name.text,
+                    start_date=start_date,
+                    end_date=end_date,
+                    rating=rating,
+                    hour_count=hour_count,
+                    hourly_rate=hourly_rate,
+                    earned=earned,
+                )
+                freelancer_job_obj.save()
+            log.debug('saved job {}'.format(name.text))
 
     def scrape_urls(self, url, page_count):
         urls = []
@@ -155,70 +164,45 @@ class UpworkScraper(Upwork):
         log.debug('scraped {} urls'.format(len(urls)))
         return urls
 
-    def scrape(self, name, email, password, urls):
-        results = []
+    def scrape(self, email, password, urls, scraper_id):
         try:
-            log.debug('starting {} scraper'.format(name))
             self.start()
             self.login(email, password)
             for url in urls:
                 self.get(url)
                 try:
-                    results.append(self.parse_freelancer(url))
+                    freelancer = self.parse_freelancer(url, scraper_id)
+                    self.parse_jobs(freelancer)
                 except WebDriverException:
                     continue
-            log.debug('stoping {} scraper'.format(name))
-            return results
         finally:
             self.stop()
 
 
-class UpworkInviter(Upwork):
+class UpworkJob(Upwork):
 
-    def send(self, message_str, category_str, title_str, description_str,
-             type_str, duration_str, workload_str, public_str):
+    def contact(self, message_str, name_str, freelancer):
         contact_button = self.element(By.LINK_TEXT, 'Contact', 'contact')
         self.click(contact_button, 'contact')
         message = self.element(By.ID, 'message', 'message')
         self.clear(message, 'message')
         self.send_keys(message, 'message', message_str)
-        category_str, subcategory_str = category_str.split(' | ')
-        category = self.element(By.ID, 'category', 'category')
-        self.scroll(category, 'category')
-        self.select(category, 'category', category_str)
-        subcategory = self.element(By.ID, 'subcategory', 'subcategory')
-        self.select(subcategory, 'subcategory', subcategory_str)
-        title = self.element(By.ID, 'title', 'title')
-        self.send_keys(title, 'title', title_str)
-        description = self.element(By.ID, 'description', 'description')
-        self.send_keys(description, 'description', description_str)
-        if type == 'Fixed price':
-            fixed_price = self.element(By.ID, 'job_type-Fixed', 'fixed price')
-            self.click(fixed_price, 'fixed price')
-        duration = self.element(By.ID, 'job_length', 'duration')
-        self.select(duration, 'duration', duration_str)
-        workload = self.element(By.ID, 'job_hours', 'workload')
-        self.select(workload, 'workload', workload_str)
-        if not public_str:
-            public = self.element(By.ID, 'visibility', 'public')
-            self.click(public, 'public')
+        opening = self.element(By.ID, 'opening', 'opening')
+        self.select(opening, 'opening', name_str)
         invite = self.element(By.ID, 'submit', 'invite')
         self.click(invite, 'invite')
+        freelancer.invited = True
+        freelancer.save()
 
-    def invite(self, name, email, password, message, category, title,
-               description, type, duration, workload, public, freelancers):
+    def invite(self, name, email, password, message, freelancers):
         try:
-            log.debug('starting {} inviter'.format(name))
             self.start()
             self.login(email, password)
             for freelancer in freelancers:
                 self.get(freelancer.url)
-                self.send(
-                    message, category, title, description, type, duration,
-                    workload, public
-                )
-                freelancer.invited = True
-                freelancer.save()
-            log.debug('stoping {} inviter'.format(name))
+                try:
+                    self.contact(message, name, freelancer)
+                except WebDriverException:
+                    continue
         finally:
             self.stop()

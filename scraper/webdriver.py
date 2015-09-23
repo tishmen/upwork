@@ -1,5 +1,6 @@
 import logging
 import time
+import random
 
 import requests
 from bs4 import BeautifulSoup
@@ -21,7 +22,7 @@ class Webdriver(object):
         log.debug('stoped webdriver')
 
     def sleep(self):
-        seconds = 1
+        seconds = random.uniform(5, 10)
         log.debug('sleeping {} seconds'.format(seconds))
         time.sleep(seconds)
 
@@ -55,12 +56,6 @@ class Webdriver(object):
         element.clear()
         log.debug('cleared {}'.format(name))
         self.sleep()
-
-    def scroll(self, element, name):
-        self.webdriver.execute_script(
-            'return arguments[0].scrollIntoView();', element
-        )
-        log.debug('scrolled to {} element'.format(name))
 
     def element(self, by, selector, name, parent=None):
         if parent:
