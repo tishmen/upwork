@@ -45,7 +45,7 @@ class FreelancerAdmin(admin.ModelAdmin):
         'name', 'title', 'location', 'hourly_rate', 'rating', 'job_success',
         'hours_worked', 'job_count', 'invited'
     )
-    list_filter = ('scraper', 'invited')
+    list_filter = ('scraper__name', 'invited')
     actions = ('invite', )
     search_fields = ('name', 'title', 'location')
     inlines = (FreelancerJobInline, )
