@@ -5,7 +5,7 @@ import djcelery
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ERROR_DIR = os.path.join(BASE_DIR, 'scraper', 'errors')
+ERROR_DIR = os.path.join(BASE_DIR, 'errors')
 
 SECRET_KEY = '*^&l#)e*i23r381w-=ca@x03z91fs&*)pge=5-%g#y#q=3(%ca'
 

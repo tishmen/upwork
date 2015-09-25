@@ -1,11 +1,13 @@
+import os
 import logging
 import time
-import random
+from datetime import datetime
 
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
+from django.conf import settings
 
 log = logging.getLogger('upwork')
 
@@ -22,9 +24,7 @@ class Webdriver(object):
         log.debug('stoped webdriver')
 
     def sleep(self):
-        seconds = random.uniform(5, 10)
-        log.debug('sleeping {} seconds'.format(seconds))
-        time.sleep(seconds)
+        time.sleep(1)
 
     def get(self, url):
         self.webdriver.get(url)
@@ -72,3 +72,15 @@ class Webdriver(object):
             elements = self.webdriver.find_elements(by, selector)
         log.debug('found {} {} elements'.format(len(elements), name))
         return elements
+
+    def onerror(self):
+        stamp = datetime.now().isoformat()
+        screenshoot_path = os.path.join(
+            settings.ERROR_DIR, '{}.png'.format(stamp)
+        )
+        self.webdriver.get_screenshot_as_file(screenshoot_path)
+        log.debug('took screenshot as {}'.format(screenshoot_path))
+        source_path = os.path.join(settings.ERROR_DIR, '{}.html'.format(stamp))
+        with open(source_path, 'w') as f:
+            f.write(self.webdriver.page_source)
+        log.debug('saved source as {}'.format(source_path))

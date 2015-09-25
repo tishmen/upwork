@@ -177,6 +177,9 @@ class UpworkScraper(Upwork):
                         self.parse_jobs(freelancer)
                 except WebDriverException:
                     continue
+        except Exception:
+            self.onerror()
+            raise
         finally:
             self.stop()
 
@@ -206,5 +209,8 @@ class UpworkJob(Upwork):
                     self.contact(message, name, freelancer)
                 except WebDriverException:
                     continue
+        except Exception:
+            self.onerror()
+            raise
         finally:
             self.stop()
